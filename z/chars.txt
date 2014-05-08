@@ -1,0 +1,59 @@
+6  Z characters			ISO/IEC 13568:2002(E)
+
+6.2 Formal definition of Z characters
+
+Copyright notice
+
+The reproduction of this clause is permitted on the understanding that
+this material is public domain, and on the condition that this
+International Standard is referenced as the source document.  With the
+exception of clauses 6.2, 7.2, 8.2, 11 and annex B, all other parts of
+the text are subject to the usual copyright rules stated on page ii of
+this International Standard.
+
+ZCHAR = DIGIT | LETTER | SPECIAL | SYMBOL ;
+DIGIT = DECIMAL
+| ? other UCS chars with Number property but Number, Decimal Digit (as supported) ?
+;
+DECIMAL = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+| ? any other UCS characters with Number, Decimal Digit property (as supported) ?
+;
+LETTER = LATIN | GREEK | OTHERLETTER
+| ? any characters of the mathematical toolkit with letter property (as supported) ?
+| ? any other UCS characters with letter property (as supported) ?
+;
+LATIN = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I '
+| 'J ' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R'
+| 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y ' | 'Z'
+| 'a' | 'b' | 'c' | 'd' | 'e' | 'f ' | 'g' | 'h' | 'i'
+| 'j ' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r'
+| 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z'
+;
+
+GREEK = 'Δ' | 'Ξ' | 'θ' | 'λ' | 'μ' ;
+
+OTHERLETTER = 'A' | 'ℕ' | 'ℙ' ;  double-struck cap A:  U+0001D538; N: U+2115;  P: U_2119
+
+SPECIAL = STROKECHAR | WORDGLUE | BRACKET | BOXCHAR | NLCHAR | SPACE ;
+
+STROKECHAR = '0' | '!' | '?' ;
+
+WORDGLUE = '%' | '.' | '&' | '-' | ' ' ;
+
+BRACKET = '(' | ')' | '[' | ']' | 'f' | 'g' | 'hj' | 'ji' | 'hh' | 'ii' ;
+
+BOXCHAR = ZEDCHAR | AXCHAR | SCHCHAR | GENCHAR | ENDCHAR ;
+
+SYMBOL = 'j' | '&' | '`' | '^' | '_' | ')' | ',' | ':' | '8' | '9'
+| '' | '=' | '=' | '2' | ':' | '; ' | ';' | ':' | ''
+| 'n' | '' | 'o9
+' | '>>' | '+'
+| ? any characters of the mathematical toolkit with neither letter or
+number property (as supported) ?
+| ? any other UCS characters with neither letter or
+number property and that are not in SPECIAL(as supported) ?
+
+
+c ISO/IEC 2002|All rights reserved				19
+
+
