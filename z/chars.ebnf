@@ -1,0 +1,136 @@
+(* 6  Z characters			ISO/IEC 13568:2002(E) *)
+
+(* 6.2 Formal definition of Z characters *)
+
+(* Copyright notice *)
+
+(* The reproduction of this clause is permitted on the understanding that *)
+(* this material is public domain, and on the condition that this *)
+(* International Standard is referenced as the source document.  With the *)
+(* exception of clauses 6.2, 7.2, 8.2, 11 and annex B, all other parts of *)
+(* the text are subject to the usual copyright rules stated on page ii of *)
+(* this International Standard. *)
+
+ZCHAR = DIGIT | LETTER | SPECIAL | SYMBOL ;
+
+DIGIT = DECIMAL
+    | ? other UCS chars with Number property but Number, Decimal Digit (as supported) ?
+    ;
+
+DECIMAL = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+    | ? any other UCS characters with Number, Decimal Digit property (as supported) ?
+    ;
+
+LETTER = LATIN | GREEK | OTHERLETTER
+    | ? any characters of the mathematical toolkit with letter property (as supported) ?
+    | ? any other UCS characters with letter property (as supported) ?
+    ;
+
+LATIN = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I '
+    | 'J ' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R'
+    | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y ' | 'Z'
+    | 'a' | 'b' | 'c' | 'd' | 'e' | 'f ' | 'g' | 'h' | 'i'
+    | 'j ' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r'
+    | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z'
+    ;
+
+GREEK =
+      'Δ' (* U+0394 *)
+    | 'Ξ' (* U+039E *)
+    | 'θ' (* U+03B8 *)
+    | 'λ' (* U+03BB *)
+    | 'μ' (* U+03BC *)
+    ;
+
+OTHERLETTER = '𝔸'  (* double-struck cap A:  U+0001 D538 *)
+    | 'ℕ' (* U+2115 *)
+    | 'ℙ'  (* U+2119 *)
+    ;
+
+SPECIAL = STROKECHAR | WORDGLUE | BRACKET | BOXCHAR | NLCHAR | SPACE ;
+
+STROKECHAR = 'ʹ'  (* U+02B9 MODIFIER LETTER PRIME *)
+    | '!' | '?' ;
+
+WORDGLUE = '↗' (* U+2197 NORTH EAST ARROW *)
+    | '↙'  (* U+2199 SOUTH WEST ARROW *)
+    | '↘'  (* U+2198 SOUTH EAST ARROW *)
+    | '↖'  (* U+2196 NORTH WEST ARROW *)
+    | '_ ' (* U+005F LOW LINE *)
+    ;
+
+BRACKET = '(' | ')'
+    | '[' | ']'
+    | '{' | '}'
+    | '⦉' | '⦊'	(* U+2989/298A Z NOTATION LEFT/RIGHT BINDING BRACKET *)
+    | '《' | '》' (* U+300A/300B LEFT/RIGHT DOUBLE ANGLE BRACKET
+    ;
+
+BOXCHAR = ZEDCHAR | AXCHAR | SCHCHAR | GENCHAR | ENDCHAR ;
+
+SYMBOL =
+      '|'
+    | '&'
+    | '⊢'	(* U+22A2 RIGHT TACK *)
+    | '∧'	(* U+2227 LOGICAL AND *)
+    | '∨'	(* U+2228 LOGICAL OR  *)
+    | '⇒'	(* U+21D2 RIGHTWARDS DOUBLE ARROW *)
+    | '⇔'	(* U+21D4 LEFT RIGHT DOUBLE ARROW *)
+    | '¬'	(* U+00AC NOT SIGN *)
+    | '∀'	(* U+2200 FOR ALL *)
+    | '∃'	(* U+2203 THERE EXISTS *)
+    | '×'	(* U+00D7 MULTIPLICATION SIGN *)
+    | '/'	(* SOLIDUS *)
+    | '='	(* EQUALS SIGN *)
+    | '∈'	(* U+2208 ELEMENT OF *)
+    | ':'	(* COLON *)
+    | '; '	(* SEMICOLON *)
+    | ','	(* COMMA *)
+    | '.'	(* FULL STOP *)
+    | '⦁'	(* U+2981 Z NOTATION SPOT *)
+    | '⧹'	(* U+29F9 BIG REVERSE SOLIDUS *)
+    | '⨡'	(* U+2A21 Z NOTATION SCHEMA PROJECTION *)
+    | '⨟'	(* U+2A21 Z NOTATION SCHEMA COMPOSITION *)
+    | '⨠'	(* U+2A20 Z NOTATION SCHEMA PIPING *)
+    | '+'	(* U+002B PLUS SIGN *)
+    | ? any characters of the mathematical toolkit with neither letter or
+    number property (as supported) ?
+    | ? any other UCS characters with neither letter or
+    number property and that are not in SPECIAL(as supported) ?
+    | MATH
+    ;
+
+(* c ISO/IEC 2002|All rights reserved				19 *)
+
+(* 6.4.6 Mathematical toolkit characters *)
+
+MATH = SET-TK | RELATION-TK | FUNCTION-TK | NUMBER-TK | SEQUENCE-TK ;
+
+SET-TK =
+      '↔'  (* U+0000 2194 LEFT RIGHT ARROW *)
+    | '→'  (* U+0000 2192 RIGHTWARDS ARROW *)
+    | '≠'  (* U+0000 2260 NOT EQUAL TO *)
+    | '∈'  (* U+0000 2209 NOT AN ELEMENT OF *)
+    | '∅'  (* U+0000 2205 EMPTY SET *)
+    | '⊆'  (* 0000 2286		SUBSET OF OR EQUAL TO
+⊂        0000 2282		SUBSET OF
+∪        0000 222A		UNION
+∩        0000 2229		INTERSECTION
+\        0000 005C		REVERSE SOLIDUS
+⊖        0000 2296		CIRCLED MINUS
+􏰌 􏰍      0000 22C3		N-ARY UNION
+F        0000 22C2		N-ARY INTERSECTION
+6.4.6.2  0001 D53D		MATHEMATICAL DOUBLE-STRUCK CAPITAL F
+ Math
+􏰂→
+o 9
+◦
+▹
+◃
+−▹
+−◃ ∼
+(| |) ⊕
+6.4.6.3 Math
+→􏰂 􏰅􏰂 􏰅 →􏰂 → 􏰅→ →􏰂 􏰂 􏰅􏰂 􏰂
+Section set toolkit
+Code position
