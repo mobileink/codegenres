@@ -26,8 +26,8 @@ special kind of set of ordered pairs; no more, no less.  This concept
 does not involve any notion of computation.
 * [Category theory](http://plato.stanford.edu/entries/category-theory/)
   (CT) "appeared almost out of nowhere" in a paper 1945 paper by
-  Eilenberg & Mac Lane, although it was not realized until the
-  1960s(?) that CT could serve as a foundational framework.  It grew out or researches in algebra.
+  Eilenberg & Mac Lane, but it was not realized until the
+  1960s(?) that CT could serve as a foundational framework.  CT grew out of researches in algebra.
 * [Homotopy Type Theory](http://homotopytypetheory.org/book/) (HoTT)
   is a (very) recent entrant, "based on a recently discovered
   connection between homotopy theory and type theory."
@@ -38,7 +38,7 @@ lambda calculus depends critically on a particular notion of function
 as a "lambda abstraction".
 
 In practical programming functions are usually treated in relative
-isolation.  A function takes and input and returns an output; the
+isolation.  A function takes an input and returns an output; the
 focus is on what the function does to/with the input in order to
 produce the output.  This reflects an implicit machine-like notion of
 function as a kind of black-box transforming device.
