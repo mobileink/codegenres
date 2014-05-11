@@ -21,15 +21,13 @@ to the "foundations of mathematics".  A foundation of mathematics is a
 theory from which, in principle, all of mathematics can be derived.
 
 * [Set theory](http://plato.stanford.edu/entries/set-theory/) (ST)
-  "appeared almost out of nowhere" in a paper 1945 paper by Eilenberg
-  & Mac Lane.  It grew out or researches in algebra.  From the ST
-  perspective, a function is a special kind of set of ordered pairs;
-  no more, no less.  This concept does not involve any notion of
-  computation.
-* [Category theory](http://plato.stanford.edu/entries/category-theory/) (CT)
- originated from research in algebra in the 1940s, although it was not
- realized until the 1960s(?) that CT could serve as a foundational
- framework.
+emerged in the late 1900s.  From the ST perspective, a function is a
+special kind of set of ordered pairs; no more, no less.  This concept
+does not involve any notion of computation.
+* [Category theory](http://plato.stanford.edu/entries/category-theory/)
+  (CT) "appeared almost out of nowhere" in a paper 1945 paper by
+  Eilenberg & Mac Lane, although it was not realized until the
+  1960s(?) that CT could serve as a foundational framework.  It grew out or researches in algebra.
 * [Homotopy Type Theory](http://homotopytypetheory.org/book/) (HoTT)
   is a (very) recent entrant, "based on a recently discovered
   connection between homotopy theory and type theory."
